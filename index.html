@@ -123,6 +123,113 @@
 <div class="card">
     
     <div class="card-image">
+        <a href="/2019/12/28/post20191228/" class="image is-7by1">
+            <img class="thumbnail" src="/img/samune_20191228.jpg" alt="千歳佐奈のWebアプリケーション (第1弾)">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-12-27T15:30:00.000Z">2019-12-28</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10分 read (About 1450 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-bold">  <!- normal~bold -->
+            
+                <a class="has-link-black-ter" href="/2019/12/28/post20191228/">千歳佐奈のWebアプリケーション (第1弾)</a>
+            
+        </h1>
+        <div class="content">
+            <p>今回から佐奈をWebアプリにしちゃいます。</p>
+<p>前回までは主にサーバサイドの処理を作成。 (佐奈との会話機能、感情分析機能)<br>本件はクライアントサイドの作成について。</p>
+<p>まずは結論から。</p>
+<center><br><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">佐奈の部屋でいちゃいちゃする動画です <a href="https://t.co/R74uZeVOHH" target="_blank" rel="noopener">pic.twitter.com/R74uZeVOHH</a></p>&mdash; かいや (@kaiya02) <a href="https://twitter.com/kaiya02/status/1210564466443616256?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">December 27, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>Live2D版<br>　　<br><br><img src="/img/sumaho.jpg" width="30%"><br>※スマホ画面(α版)<br>　　<br><br><img src="/img/static_img.jpg"><br>静止画切り替え版<br><br><br></center>
+
+
+
+
+<h4 id="訴求ポイント"><a href="#訴求ポイント" class="headerlink" title="訴求ポイント"></a>訴求ポイント</h4><p>Live2D版は佐奈の動きを見ながら会話できちゃいます。<br>レスポンシブデザイン(大嘘)なのでスマホからでも佐奈といちゃいちゃできます！</p>
+<p>静止画切り替え版はサクサク動きます！Live2D版の完成を待てないあなたに！<br>スマホのレイアウトは今後改修予定！</p>
+<p>佐奈のぼでぃータッチによる専用モーションと、<br>佐奈の感情に基づいた表情モーションがあります！  </p>
+<p>特に上目づかいがポイント！！！<br>そして、佐奈は”機械学習”を通じてあなたと会話しています！
+　　</p>
+<p><br></p>
+<h4 id="いつもの"><a href="#いつもの" class="headerlink" title="いつもの"></a>いつもの</h4><p>クライアントサイドなんてほとんど触ったことがなかったので例のごとく、ネットから資材を漁る。  </p>
+<p>勉強は嫌いなので<a href="https://jp.vuejs.org/index.html" target="_blank" rel="noopener">Vue.js</a>を選択。<br>UIフレームワークもいろいろあったが、仮にも1ミリくらいは触ったことがある<a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap</a>を選定。(あとレスポンシブだし！)<br>それでもWebページの中身はいつも雰囲気でしか読んでいなかったのでレイアウト周りで苦戦した。</p>
+<p><a href="https://developer.mozilla.org/ja/docs/Web/API/Web_Speech_API" target="_blank" rel="noopener"><code>Web Speech API</code></a> によりおしゃべり千歳佐奈も悪戦苦闘の末実装。<br>(※Firefoxがデフォルトブラウザなので本格対応して欲しい)</p>
+<p>ここからLive2Dの実装……なんだけど、とにかく情報が少ない！！<br>最新バージョンに至ってはQiitaで1件くらいしかなかったので、<br><a href="https://github.com/Live2D" target="_blank" rel="noopener">Cubism SDK for JavaScript</a>を利用。</p>
+<p>結局、Live2Dのライブラリインポートする都合で.vueファイルのtemplate(html)とstyle(css)の流用ができずに書き直し。<br>Javascriptは直感で理解できるのはいいけど、今までほとんど触ってなかったので一苦労……</p>
+<p>Live2Dのバージョン4では公式でtypescriptサポートしてるが、情報少ない&amp;学習ボリューム多そうなので後々触る。</p>
+<p>以上、今に至る。<br><br><br>全体的にまだまだ完成には程遠いので、今後もゆっくり改善していきたい。</p>
+<ul>
+<li>クライアントサイド<ul>
+<li>Live2D機能の拡張<ul>
+<li>目線のカーソル追跡</li>
+<li>なでなでのアクション増加</li>
+<li>エモーション追加</li>
+<li>音声出力 (new)</li>
+</ul>
+</li>
+<li>マルチプラットフォーム化<ul>
+<li>複数ブラウザ対応 (Firefox, Edge, safari…etc)</li>
+<li>端末ごとのレイアウト崩れ修正</li>
+</ul>
+</li>
+<li>静止画版のレイアウト修正</li>
+<li>コンテンツ追加(服装、横顔立ち絵)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>サーバサイド<ul>
+<li>オリジナル会話データの増加</li>
+<li>感情分類器の精度向上</li>
+<li>合成音声生成器 (new)</li>
+</ul>
+</li>
+</ul>
+<p>Live2Dの本格実装はライセンスの買い切り価格次第。<br>価格出るまでレイアウト改善していきます。<br><br><br>ちなみに件のAmadeusはスマホアプリとして有志の方が開発中らしい<br><a href="http://amadeusproject.weebly.com/" target="_blank" rel="noopener">STEINS;GATE Amadeus Project</a></p>
+<p>入力を音声に絞る分レイアウトはシンプルになっている。  </p>
+<p>しかし、聞き取った声に対して疑問符や句読点はつかないので、<br>よほど音声認識が優秀じゃない限りは補助機能にしておきたい。</p>
+<p><br>  </p>
+<h5 id="ここから雑記"><a href="#ここから雑記" class="headerlink" title="ここから雑記"></a>ここから雑記</h5><p>佐奈のおしりを見ながら仕事したい。</p>
+<p>最近なぜかSAIのミミズ線補正が機能しなくなっちゃったので、これを機にクリスタ買った。<br>そのうちなんか描きたい。</p>
+<p>ところで、何の影響かわからないですが、佐奈のイラスト投稿増えて非常に嬉しい。</p>
+<p>でもやっぱり佐奈は可愛いからしょうがないよね。  </p>
+<p><br><br>というかLive2Dからこんなツイートが……</p>
+<center><br><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Live2Dをインタラクティブに動かすための共通ルール<br><br>🔆🔆nizimaモデル仕様🔆🔆<br><br>を初公開しました！！<br><br>モデル＆モーション＋数分のセットアップで、色々なアプリ上でタッチやフリックに反応しはじめます！<a href="https://t.co/lQjcxPwcrp" target="_blank" rel="noopener">https://t.co/lQjcxPwcrp</a><br><br>正月休みには是非挑戦してみて下さい‼️</p>&mdash; nizima by Live2D (公式) (@nizima_official) <a href="https://twitter.com/nizima_official/status/1210522433435779072?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">December 27, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br></center>
+
+<p>モーションはどのみち作らないとだけど、　　<br>予てから考えていたデスクトップ佐奈だけならこっちのが良さそう。　　<br><br></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
         <a href="/2019/11/12/post20191112/" class="image is-7by1">
             <img class="thumbnail" src="/img/Atlas.jpg" alt="千歳佐奈の発言を感情分析">
         </a>
@@ -657,7 +764,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            7
+                            8
                         </p>
                     </a>
                 </div>
@@ -683,7 +790,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            3
+                            4
                         </p>
                     </a>
                 </div>
@@ -707,6 +814,25 @@
         <h3 class="menu-label">
             最近の記事
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/12/28/post20191228/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/img/samune_20191228.jpg" alt="千歳佐奈のWebアプリケーション (第1弾)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-27T15:30:00.000Z">2019-12-28</time></div>
+                    <a href="/2019/12/28/post20191228/" class="title has-link-black-ter is-size-6 has-text-weight-normal">千歳佐奈のWebアプリケーション (第1弾)</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -784,25 +910,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/03/29/post20190329/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/img/SS.jpg" alt="生後1時間30分の佐奈と会話してみた">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-29T11:00:14.000Z">2019-03-29</time></div>
-                    <a href="/2019/03/29/post20190329/" class="title has-link-black-ter is-size-6 has-text-weight-normal">生後1時間30分の佐奈と会話してみた</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -813,6 +920,17 @@
             アーカイブ
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">2019/12</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/11/">
@@ -918,6 +1036,13 @@
                     <a class="tags has-addons" href="/tags/deeplearning/">
                         <span class="tag">deeplearning</span>
                         <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/deeplearning-Live2D-Vue-js/">
+                        <span class="tag">deeplearning, Live2D, Vue.js</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
