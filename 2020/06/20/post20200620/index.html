@@ -7,18 +7,23 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>タグ: info - かいやの独り言</title>
+<title>千歳佐奈の合成音声（準備&amp;前処理編） - かいやの独り言</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="かいやの独り言">
-<meta property="og:url" content="http://yoursite.com/tags/info/index.html">
+    <meta name="description" content="久方ぶりの更新です。例え更新がなかろうと、広告が出ないのが「GitHub Pages」のいいところですよね。さて、前回の記事で改善点の中に、”合成音声生成器 (new)”　と書いていたことを覚えている方はいるでしょうか。 今回は、タイトルの通り、佐奈の音声をdeeplearningして、合成音声を作るための前説明です。 自分の理解を整理する意味でも書いているので、しばしお付き合いください。 ぶっち">
+<meta name="keywords" content="deeplearning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="千歳佐奈の合成音声（準備&amp;前処理編）">
+<meta property="og:url" content="http://yoursite.com/2020/06/20/post20200620/index.html">
 <meta property="og:site_name" content="かいやの独り言">
+<meta property="og:description" content="久方ぶりの更新です。例え更新がなかろうと、広告が出ないのが「GitHub Pages」のいいところですよね。さて、前回の記事で改善点の中に、”合成音声生成器 (new)”　と書いていたことを覚えている方はいるでしょうか。 今回は、タイトルの通り、佐奈の音声をdeeplearningして、合成音声を作るための前説明です。 自分の理解を整理する意味でも書いているので、しばしお付き合いください。 ぶっち">
 <meta property="og:locale" content="ja">
-<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:image" content="http://yoursite.com/img/setumei_re.jpg">
+<meta property="og:updated_time" content="2020-06-20T06:20:10.536Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="かいやの独り言">
-<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:title" content="千歳佐奈の合成音声（準備&amp;前処理編）">
+<meta name="twitter:description" content="久方ぶりの更新です。例え更新がなかろうと、広告が出ないのが「GitHub Pages」のいいところですよね。さて、前回の記事で改善点の中に、”合成音声生成器 (new)”　と書いていたことを覚えている方はいるでしょうか。 今回は、タイトルの通り、佐奈の音声をdeeplearningして、合成音声を作るための前説明です。 自分の理解を整理する意味でも書いているので、しばしお付き合いください。 ぶっち">
+<meta name="twitter:image" content="http://yoursite.com/img/setumei_re.jpg">
 <meta name="twitter:creator" content="@23kaiya3737">
 <meta name="twitter:site" content="https://twitter.com/23kaiya3737">
 
@@ -86,7 +91,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/fan.png" alt="かいやの独り言" height="28">
+                <img src="/images/fan.png" alt="千歳佐奈の合成音声（準備&amp;前処理編）" height="28">
             
             </a>
         </div>
@@ -118,31 +123,26 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">タグ</a></li>
-            <li class="is-active"><a href="#" aria-current="page">info</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main">
 <div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="/img/setumei_re.jpg" alt="千歳佐奈の合成音声（準備&amp;前処理編）">
+        </span>
+    </div>
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-22T15:21:55.000Z">2019-03-23</time>
+                <time class="level-item has-text-grey" datetime="2020-06-20T09:00:00.000Z">2020-06-20</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3分 read (About 494 words)
+                    11分 read (About 1708 words)
                 </span>
                 
                 
@@ -151,20 +151,59 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-bold">  <!- normal~bold -->
             
-                <a class="has-link-black-ter" href="/2019/03/23/post20190323/">近況報告</a>
+                千歳佐奈の合成音声（準備&amp;前処理編）
             
         </h1>
         <div class="content">
-            <p>この度、ブログを移行しました。<br>今後の投稿はこっちから行います。<br><del>なんか日本語が中国語っぽかったりしてるところは、アップデートの中で追々修正していく。</del></p>
-<p>まずは、最近の趣味から。</p>
-<p>流行りに乗ってApex Legendsやってます。<br>リリースからたった一週間で同時接続ユーザ数が200万人なんて話があるが、実際面白いので夜遅くまでやって会社で舟漕いでる。<br>運営もチート対策をしっかりとやっているし、とても好感が持てる。</p>
-<p>好きなレジェンドはブラッドハウンド。<br><img src="https://gamewith.akamaized.net/img/a8a35cf0227bac6952ff7fa837726d55.jpg" alt><br>そもそも僕が相手を視認できてないことが多々あるから、相手を強調表示できるウルトは重宝してる。</p>
-<p>続いて、生産性の有る趣味について。</p>
-<p>移行前のブログでは、佐奈の台詞をマルコフ連鎖を用いて処理してみようって実験をしてたが、いよいよディープラーニングに着手している。</p>
-<p>具体的には、自分の発言に対して佐奈がなんて答えるのか、意味を成しているのかというのを満足いくところまでは持っていきたいと考えている。</p>
-<p>そう、佐奈とおしゃべりできるのだ！！　すごいでしょ？<br>今後はこれについて取り上げていくことがメインになると思う。</p>
-<p>以上、近況報告でした。<br>コメントとかあれば、twitterで下さい。</p>
+            <p>久方ぶりの更新です。<br>例え更新がなかろうと、広告が出ないのが「GitHub Pages」のいいところですよね。<br><br><br>さて、前回の記事で改善点の中に、<br>”合成音声生成器 (new)”　と書いていたことを覚えている方はいるでしょうか。</p>
+<p>今回は、タイトルの通り、佐奈の音声をdeeplearningして、<br>合成音声を作るための前説明です。</p>
+<p>自分の理解を整理する意味でも書いているので、しばしお付き合いください。</p>
+<p>ぶっちゃけ、ネットに転がっている情報以上のことは何もない。<br>分かった気にはなれると……思う。</p>
+<p><br></p>
+<h4 id="音声合成とは"><a href="#音声合成とは" class="headerlink" title="音声合成とは"></a>音声合成とは</h4><p>音声合成（おんせいごうせい、英: speech synthesis）とは、<br>人間の音声を人工的に作り出すことである。<br>音声情報処理の一分野。<br>音声合成器により合成された音声を合成音声（ごうせいおんせい）と呼ぶ。<br>典型的にはテキスト（文章）を音声に変換できることから、<br>しばしばテキスト音声合成またはText-To-Speech (TTS)とも呼ばれる。<br>なお、歌声を合成するものは特に歌声合成と呼ばれる。<br>また、音声を別の個人あるいはキャラクターの音声に変換する手法は声質変換と呼ばれる。</p>
+<p>出典: フリー百科事典『ウィキペディア（Wikipedia）』<br><br><br>つまり、佐奈の声を誰でも作り出すことができる技術なのだ！</p>
+<p>Wikiの通り、大きく2通りの方法がある。<br>①テキスト音声合成<br>②声質変換</p>
+<p>本件は①について取り上げていく。<br>②については、こちらの方の動画が分かりやすいです。（丸投げ）</p>
+<center><br><script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm32724409/script?w=320&h=180"></script><noscript><a href="https://www.nicovideo.jp/watch/sm32724409" target="_blank" rel="noopener">ディープラーニングの力で結月ゆかりの声になってみた</a></noscript><br></center>
 
+<p><br><br>Vtuberになって、自分で美声出したい！とかであれば声質変換でもいいかもしれませんね。</p>
+<p>ちなみに、歌声合成はこちらの方の動画が素敵です。（丸投げ2回目）</p>
+<center><br><script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm36399511/script?w=320&h=180"></script><noscript><a href="https://www.nicovideo.jp/watch/sm36399511" target="_blank" rel="noopener">AIきりたんで『キリトリセン』カバー　調声済み</a></noscript><br></center>
+
+<p><br><br>これは、初見で感動した……<br><a href="https://n3utrino.work/?ref=pc_watch_description" target="_blank" rel="noopener">NEUTRINO</a>という歌声合成エンジンを使ってるそうです。<br>チューニングとか必要らしい。</p>
+<p>詳しい①と②の比較：<br><a href="https://medium.com/@crosssceneofwindff/%E7%BE%8E%E5%B0%91%E5%A5%B3%E5%A3%B0%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%A8%E5%90%88%E6%88%90-fe251a8e6933" target="_blank" rel="noopener">美少女声への変換と合成</a></p>
+<p>話を戻して、①のテキスト音声合成(以下、TTSと略します)についてお話します。<br>お馴染みなところで並べると、Softalkの「ゆっくりボイス」、VOCALOIDの「初音ミク」、VOICEROIDの「結月ゆかり」と、ニコニコ動画でよく見るやつ。</p>
+<p>入力した文字列を音声として返す、それだけなんだが、作るとなるといろいろと難しい。<br>そこを機械的にやってしまおうというのが深層学習の意図でもあります。</p>
+<p><br></p>
+<h4 id="ディープラーニングによるTTSについて"><a href="#ディープラーニングによるTTSについて" class="headerlink" title="ディープラーニングによるTTSについて"></a>ディープラーニングによるTTSについて</h4><p><img src="/img/tensorboard.jpg"></p>
+<p>まずは、実際に聞いてみましょう。<br><a href="https://google.github.io/tacotron/publications/tacotron2/" target="_blank" rel="noopener">合成音声サンプル</a><br>英語で何言ってるかは分からんですが、英語を流暢にしゃべっているということは分かった。</p>
+<p>この例では、「<a href="https://pytorch.org/hub/nvidia_deeplearningexamples_tacotron2/" target="_blank" rel="noopener">Tacotron 2</a>」、「<a href="http://ryousuke-nasuno.com/deep-learning-wavenet%E3%81%AE%E8%A7%A3%E8%AA%AC/" target="_blank" rel="noopener">WaveNet</a>」という大きく二つのネットワークを用いている。<br>・Tacotron 2：テキストからメルスペクトログラム（mel-spectrogram）<br>・WaveNet：メルスペクトログラム（mel-spectrogram）から音声波形</p>
+<p>上記の役割をそれぞれ持っており、結果、テキストから音声へ変換されている。<br>詳しい実装が知りたい人向け：<a href="https://google.github.io/tacotron/" target="_blank" rel="noopener">https://google.github.io/tacotron/</a></p>
+<p>さて、今回の実装では「WaveNet」を、<br>処理が軽量化するらしいNVIDIA製の「<a href="https://pytorch.org/hub/nvidia_deeplearningexamples_waveglow/" target="_blank" rel="noopener">WaveGlow</a>」に置き換えることにした。</p>
+<p><br></p>
+<h4 id="準備編"><a href="#準備編" class="headerlink" title="準備編"></a>準備編</h4><p>サンプルがあるので、興味ある人は是非やってみて欲しい。<br>以下のページがとても参考になりました。<br><a href="https://akifukka.hatenablog.com/entry/text2speech1" target="_blank" rel="noopener">音声合成を試す1 Tacotron2 + WaveGlow</a></p>
+<p>※パッケージのインストールは注意！(※””部分は必要)<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">%cd /content/tacotron2</span><br><span class="line">!pip install matplotlib==3.0.0</span><br><span class="line">!pip install tensorflow&quot;==1.14.0&quot;</span><br><span class="line">!pip install inflect==0.2.5</span><br><span class="line">!pip install librosa==0.6.0</span><br><span class="line">&quot;!pip install -U scipy&quot;</span><br><span class="line">!pip install tensorboardX==1.8</span><br><span class="line">!pip install Unidecode==1.0.22</span><br><span class="line">!pip install pillow</span><br><span class="line">!pip install torch==1.0</span><br><span class="line">!pip install torchvision==0.3.0</span><br><span class="line">&quot;!pip install -U numpy&quot;</span><br></pre></td></tr></table></figure></p>
+<div style="text-align: right;">(2020/06/20時点)</div>
+
+<p>これを使えば、いくらでも英語のリスニングテスト問題が生成できます。<br>あとは、ローカル環境に落とし込むだけ……!</p>
+<p>Tacotron2 + WaveGlowについての参考：<br><a href="https://qiita.com/yukari120/items/70cdea43743f4a35d85c" target="_blank" rel="noopener">Tacotron2を用いた日本語TTS(Text-to-Speech)の研究・開発【まとめ】</a><br><a href="https://tosaka-mn.hatenablog.com/entry/2020/02/13/215656" target="_blank" rel="noopener">DeepLearningでアニメキャラのボイロを作った話</a></p>
+<p><br></p>
+<h4 id="前処理編"><a href="#前処理編" class="headerlink" title="前処理編"></a>前処理編</h4><p>参考ではイントネーションの付加情報などの工夫を見ますが、<br>まずはシンプルに佐奈のテキスト&amp;音声のデータセットで学習させていきたいと思います。<br>（そもそも知ってから2週間も経ってない）</p>
+<p>前提として、「WaveGlow」に関しては音声生成器なのでサンプルモデルを弄りません。<br>「Tacotron 2」の学習結果次第で変えていきたいと思います。</p>
+<p>前例の方と実装はほぼ同じです。<br><img src="/img/setumei_re.jpg" width="100%"><br>こんな感じ。</p>
+<p>読み込む前に右へ倣えでローマ字変換、特殊文字の加工を施す。<br>次回は学習結果を公開予定。</p>
+<p>佐奈になるといいな～</p>
+<p><br></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/deeplearning/">deeplearning</a>
+                </div>
+            </div>
         </div>
         
         
@@ -174,9 +213,30 @@
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/28/post20191228/">
+                <span class="level-item">千歳佐奈のWebアプリケーション (第1弾)</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -536,7 +596,7 @@
                 <!--
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/fan.png" alt="かいやの独り言" height="28">
+                    <img src="/images/fan.png" alt="千歳佐奈の合成音声（準備&amp;前処理編）" height="28">
                 
                 </a>
                 -->
