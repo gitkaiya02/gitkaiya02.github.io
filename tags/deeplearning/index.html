@@ -133,6 +133,81 @@
 <div class="card">
     
     <div class="card-image">
+        <a href="/2020/07/04/post20200704/" class="image is-7by1">
+            <img class="thumbnail" src="/img/Tensorboard_2.jpg" alt="千歳佐奈の合成音声（学習編①）">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-07-04T14:50:00.000Z">2020-07-04</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6分 read (About 919 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-bold">  <!- normal~bold -->
+            
+                <a class="has-link-black-ter" href="/2020/07/04/post20200704/">千歳佐奈の合成音声（学習編①）</a>
+            
+        </h1>
+        <div class="content">
+            <p>千歳佐奈のTTS、学習編①です。</p>
+<p>用いたデータ数は、本編のセリフの約1000個で、主に佐奈√を除いたもの。<br>佐奈セリフの約1/3くらい。</p>
+<p>文章成型については前記事通り、ローマ文字変換のみ、音声加工は無しで学習。</p>
+<p>佐奈のお勉強が終わるまでトータル約51時間で丸2日とちょっとかかりました。※600000step</p>
+<p>損失関数は以下の通り。<br>画像では60000～80000step以降佐奈の暴走(過学習)が起きています。<br><br><br><img src="/img/Tensorboard_2.jpg"></p>
+<p>実際には60万stepで過学習が起きていますが、<br>エラー吐いて学習止まってることがあり、その度にグラフが0stepから始まっちゃいます。<br>綺麗につなぐ方法あったら教えてください( ;∀;)</p>
+<p>佐奈のお勉強のテスト結果は以下の通り。<br><br></p>
+<p>■成功例<br>・「おはようございます」</p>
+<p><iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/848964925%3Fsecret_token%3Ds-CeesfRPxHcL&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><br>かわいい！大好き！<br>佐奈の定型文なだけあって、少しホッとした。<br><br></p>
+<p>■失敗例<br>・「おはようございます、兄さん」</p>
+<p><iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/852042982%3Fsecret_token%3Ds-f6upMJsNn1C&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><br>ぉはようございますｽｽｽ…兄さん<br>ノイズが混じる～<br><br></p>
+<p>・「兄さん、おはようございます」</p>
+<p><iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/848964916%3Fsecret_token%3Ds-N4rYkRKZJNO&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><br>ほへぇ…</p>
+<p>最後の気になるけどかわいい～～～～～～！<br><br></p>
+<p>・「大丈夫」</p>
+<p><iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/852042973%3Fsecret_token%3Ds-DoqjkZkxt3S&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><br>舌足らずでかわいい～～～～～！<br><br></p>
+<p>・「大丈夫なの」</p>
+<p><iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/852042955%3Fsecret_token%3Ds-EDT9U1whH9s&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><br>”な”が言えてない！おしい！<br><br></p>
+<p>文章の前後入れ替えたり、ちょい足ししただけでもやっぱり結果が変わる。<br>ちなみにオリジナルのセリフもいくらか試してみたが、もはや言葉になってなかった……</p>
+<p>成功例のも機械音混じりになってしまっているので、<br>これを良しとするかはなかなか決め兼ねるところです。<br>上記を踏まえて、手探り考察です。</p>
+<p><br></p>
+<h4 id="考察"><a href="#考察" class="headerlink" title="考察"></a>考察</h4><p><br></p>
+<p><strong>①データ数</strong><br>他記事などをみると言うほど少なくもないかもしれないが、<br>多いに越したことは無いので次回は増加して学習予定。<br>データ数は声質と比例関係にあると考える。</p>
+<p><strong>②文章の成型</strong><br>音声と文章の突合についてはブラックボックスでやっているので、<br>セリフの”間”や長音、音声の無音部分については全く考慮していない。<br>特に佐奈は三点リーダを多用するので処理に困っている・・・・・・<br>オリジナルのセリフが弱いのはこちらが原因と考える。<br>データ増加後に検討予定。</p>
+<p><strong>③音声の成型</strong><br>こちらも②同様。<br>ただし、文章を音声に寄せる方が遥かに楽そうなので、特に変更なし。</p>
+<p><strong>④WaveGlowモデル</strong><br>音声の出力については、成功例にあるように佐奈の声質に近しいため、現状は変更なし。<br>機械音について気になるステージまで行ったら改良予定。</p>
+<p>文章の成型について教えてください！！！</p>
+<p><br></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
         <a href="/2020/06/20/post20200620/" class="image is-7by1">
             <img class="thumbnail" src="/img/setumei_re.jpg" alt="千歳佐奈の合成音声（準備&amp;前処理編）">
         </a>
@@ -598,7 +673,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            9
+                            10
                         </p>
                     </a>
                 </div>
@@ -648,6 +723,25 @@
         <h3 class="menu-label">
             最近の記事
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/07/04/post20200704/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/img/Tensorboard_2.jpg" alt="千歳佐奈の合成音声（学習編①）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-04T14:50:00.000Z">2020-07-04</time></div>
+                    <a href="/2020/07/04/post20200704/" class="title has-link-black-ter is-size-6 has-text-weight-normal">千歳佐奈の合成音声（学習編①）</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -725,25 +819,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/06/06/post20190606/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="生後3時間の佐奈とおしゃべり">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-05T20:40:00.000Z">2019-06-06</time></div>
-                    <a href="/2019/06/06/post20190606/" class="title has-link-black-ter is-size-6 has-text-weight-normal">生後3時間の佐奈とおしゃべり</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -754,6 +829,17 @@
             アーカイブ
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/07/">
+                <span class="level-start">
+                    <span class="level-item">2020/07</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/06/">
@@ -880,7 +966,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/deeplearning/">
                         <span class="tag">deeplearning</span>
-                        <span class="tag is-grey">5</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
